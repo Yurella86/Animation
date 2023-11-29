@@ -1,0 +1,964 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    .wrapper {
+        position: relative;
+        margin: auto;
+        max-width: 1024px;
+        height: 768px;
+        overflow: hidden;
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("../image/background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            .stage {
+                list-style: none;
+                .pains {
+                    .pain {
+                        position: absolute;
+                        width: 90px;
+                        height: 100px;
+                        background-image: url("../image/small_pill.png");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        transform: scale(1, 1);
+                        top: 475px;
+                        left: 425px;
+                        animation: move-pains 3.1s ease 1 both;
+                        &:last-child {
+                            top: 390px;
+                            left: 585px;
+                        }
+                    }
+                }
+                .background-visibility {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-image: url("../image/background_opacity.png");
+                    opacity: 0;
+                    animation: visibility-background 1s linear 3.1s both;
+                }
+                .action-window {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    margin: auto;
+                    background-image: url("../image/new_window_background.png");
+                    background-size: cover;
+                    background-position: center center;
+                    transform: scale(0.15, 0.15);
+                    transform: scale(1, 1);
+                    opacity: 1;
+                    animation: visibility-new-window 1s linear 3.7s both;
+                    .new-action-window {
+                        .up-black {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-image: url("../image/up_black.png");
+                            background-size: cover;
+                            animation: remove-black 1s ease 7.8s both;
+                        }
+                        .down-black {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-image: url("../image/down_black.png");
+                            background-size: cover;
+                            animation: remove-black 1s ease 10s both;
+                        }
+                        .up-text {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-image: url("../image/text.png");
+                            background-size: cover;
+                            animation: remove-black 1s ease 10s both;
+                        }
+                        .box-pills {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 10px;
+                            background-image: url("../image/pill_box.png");
+                            background-size: cover;
+                        }
+                        .body-fibers {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-image: url("../image/body-fibers.png");
+                            background-size: cover;
+                        }
+                        .cells {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-image: url("../image/shadow_white.png");
+                            background-size: cover;
+                            opacity: 0;
+                            animation: visibility-shadow-white 1.1s ease 11s 5;
+                        }
+
+                        .pills {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 5px;
+                            background-size: cover;
+                            opacity: 1;
+                            .yellow-pill {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background-image: url("../image/yellow_pill.png");
+                                background-size: cover;
+                            }
+
+                            .yellow-pill-1 {
+                                animation: move-yellow-pill-1 5.13s ease 5.2s both;
+                                transform: translate(-80px, 380px);
+                            }
+                            .yellow-pill-2 {
+                                top: 12px;
+                                right: 18px;
+                                animation: move-yellow-pill-2 5.11s ease 5.08s both;
+                                transform: translate(-95px, 360px);
+                            }
+                            .yellow-pill-3 {
+                                top: 18px;
+                                right: 36px;
+                                animation: move-yellow-pill-3 5.13s ease 5.22s both;
+                                transform: translate(-140px, 370px);
+                            }
+                            .yellow-pill-4 {
+                                top: 20px;
+                                right: 4px;
+                                animation: move-yellow-pill-4 5.12s ease 5.18s both;
+                                transform: translate(-135px, 395px);
+                            }
+                            .yellow-pill-5 {
+                                top: 30px;
+                                right: 18px;
+                                animation: move-yellow-pill-5 5.12s ease 5.14s both;
+                                transform: translate(-94px, 370px);
+                            }
+                            .yellow-pill-6 {
+                                top: 40px;
+                                right: 31px;
+                                animation: move-yellow-pill-6 5.12s ease 5.14s both;
+                                transform: translate(-62px, 355px);
+                            }
+                            .yellow-pill-7 {
+                                top: 39px;
+                                right: 4px;
+                                animation: move-yellow-pill-7 5.12s ease 5.29s both;
+                                transform: translate(-62px, 355px);
+                            }
+                            .yellow-pill-8 {
+                                top: 50px;
+                                right: 19px;
+                                animation: move-yellow-pill-8 5.13s ease 5.07s both;
+                                transform: translate(-17px, 320px);
+                            }
+                            .yellow-pill-9 {
+                                top: 56px;
+                                right: 3px;
+                                animation: move-yellow-pill-9 5.11s ease 5.2s both;
+                                transform: translate(-5px, 320px);
+                            }
+                            .yellow-pill-10 {
+                                top: 66px;
+                                right: 14px;
+                                animation: move-yellow-pill-10 5.12s ease 5.1s both;
+                                transform: translate(-220px, 350px);
+                            }
+                            .yellow-pill-11 {
+                                top: 72px;
+                                right: 34px;
+                                animation: move-yellow-pill-11 5.11s ease 5.21s both;
+                                transform: translate(-160px, 345px);
+                            }
+                            .yellow-pill-12 {
+                                top: 75px;
+                                right: 1px;
+                                animation: move-yellow-pill-12 5.13s ease 5.13s both;
+                                transform: translate(-165px, 325px);
+                            }
+                            .yellow-pill-13 {
+                                top: 87px;
+                                right: 18px;
+                                animation: move-yellow-pill-13 5.12s ease 5.26s both;
+                                transform: translate(-120px, 300px);
+                            }
+                            .red-pill {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background-image: url("../image/red_pill.png");
+                                background-size: cover;
+                            }
+                            .red-pill-1 {
+                                bottom: 49px;
+                                right: 13px;
+                                animation: move-red-pill-1 5.12s ease 5.2s both;
+                            }
+                            .red-pill-2 {
+                                bottom: 45px;
+                                left: 2px;
+                                animation: move-red-pill-2 5.22s ease 5.3s both;
+                            }
+                            .red-pill-3 {
+                                bottom: 30px;
+                                left: 4px;
+                                animation: move-red-pill-3 5.12s ease 5.3s both;
+                            }
+                            .red-pill-4 {
+                                bottom: 30px;
+                                left: 20px;
+                                animation: move-red-pill-4 5.12s ease 5s both;
+                            }
+                            .red-pill-5 {
+                                top: -24px;
+                                left: -10px;
+                                animation: move-red-pill-5 5.22s ease 5s both;
+                            }
+                            .red-pill-6 {
+                                bottom: 15px;
+                                left: 4px;
+                                animation: move-red-pill-6 5.12s ease 5s both;
+                            }
+                            .red-pill-7 {
+                                bottom: 11px;
+                                left: 14px;
+                                animation: move-red-pill-7 5.12s ease 5.2s both;
+                            }
+                            .red-pill-8 {
+                                top: -5px;
+                                left: -13px;
+                                animation: move-red-pill-8 5.12s ease 5.4s both;
+                            }
+                            .red-pill-9 {
+                                left: 0;
+                                right: 0;
+                                animation: move-red-pill-9 5.32s ease 5.4s both;
+                            }
+                            .red-pill-10 {
+                                top: 10px;
+                                left: 13px;
+                                animation: move-red-pill-10 5.32s ease 5.4s both;
+                            }
+                            .red-pill-11 {
+                                top: 17px;
+                                left: -11px;
+                                animation: move-red-pill-11 5.12s ease 5.5s both;
+                            }
+                            .red-pill-12 {
+                                top: 24px;
+                                left: 2px;
+                                animation: move-red-pill-12 5.12s ease 5.5s both;
+                            }
+                            .red-pill-13 {
+                                top: 34px;
+                                right: 10px;
+                                animation: move-red-pill-13 5.32s ease 5.5s both;
+                            }
+                            .red-pill-14 {
+                                top: 44px;
+                                right: -2px;
+                                animation: move-red-pill-14 5.12s ease 5.5s both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes move-pains {
+    0% {
+        transform: scale(1, 1);
+    }
+    15% {
+        transform: scale(1.5, 1.5);
+    }
+    30% {
+        transform: scale(1, 1);
+    }
+    45% {
+        transform: scale(1.5, 1.5);
+    }
+    60% {
+        transform: scale(1, 1);
+    }
+    75% {
+        transform: scale(1.5, 1.5);
+    }
+    90% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes visibility-background {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+@keyframes visibility-new-window {
+    0% {
+        opacity: 0;
+        transform: scale(0.15, 0.15);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+@keyframes move-yellow-pill-1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-80px, 90px);
+    }
+    57% {
+        transform: translate(-80px, 90px);
+    }
+    95% {
+        transform: translate(-80px, 380px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-80px, 380px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    36% {
+        transform: translate(-95px, 85px);
+    }
+    50% {
+        transform: translate(-95px, 85px);
+    }
+    82% {
+        transform: translate(-95px, 360px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-95px, 360px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-95px, 360px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-140px, 90px);
+    }
+    57% {
+        transform: translate(-140px, 90px);
+    }
+    85% {
+        transform: translate(-140px, 370px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-140px, 370px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-140px, 370px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-135px, 90px);
+    }
+    54% {
+        transform: translate(-135px, 90px);
+    }
+    90% {
+        transform: translate(-135px, 395px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-135px, 395px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-5 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-94px, 100px);
+    }
+    52% {
+        transform: translate(-94px, 100px);
+    }
+    82% {
+        transform: translate(-94px, 370px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-94px, 370px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-94px, 370px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-6 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(-62px, 85px);
+    }
+    50% {
+        transform: translate(-62px, 85px);
+    }
+    86% {
+        transform: translate(-62px, 355px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-62px, 355px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-62px, 355px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-7 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    43% {
+        transform: translate(-62px, 75px);
+    }
+    57% {
+        transform: translate(-62px, 75px);
+    }
+    82% {
+        transform: translate(-62px, 355px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-62px, 355px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-62px, 355px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-8 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    35% {
+        transform: translate(-17px, 48px);
+    }
+    50% {
+        transform: translate(-17px, 48px);
+    }
+    84% {
+        transform: translate(-17px, 320px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-17px, 320px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-17px, 320px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-9 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-5px, 35px);
+    }
+    53% {
+        transform: translate(-5px, 35px);
+    }
+    87% {
+        transform: translate(-5px, 320px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-5px, 320px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-5px, 320px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-10 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    35% {
+        transform: translate(-220px, 70px);
+    }
+    50% {
+        transform: translate(-220px, 70px);
+    }
+    90% {
+        transform: translate(-220px, 350px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-220px, 350px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-11 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-160px, 70px);
+    }
+    58% {
+        transform: translate(-160px, 70px);
+    }
+    85% {
+        transform: translate(-160px, 345px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-160px, 345px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-160px, 345px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-12 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    38% {
+        transform: translate(-165px, 60px);
+    }
+    56% {
+        transform: translate(-165px, 60px);
+    }
+
+    88% {
+        transform: translate(-165px, 325px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-165px, 325px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-165px, 325px);
+        opacity: 0;
+    }
+}
+@keyframes move-yellow-pill-13 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-120px, 56px);
+    }
+    50% {
+        transform: translate(-120px, 56px);
+    }
+    90% {
+        transform: translate(-120px, 300px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-120px, 300px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-120px, 300px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(95px, 55px);
+    }
+    53% {
+        transform: translate(95px, 55px);
+    }
+    83% {
+        transform: translate(95px, 340px);
+    }
+    90% {
+        transform: translate(95px, 340px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(95px, 340px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(152px, 44px);
+    }
+    53% {
+        transform: translate(152px, 44px);
+    }
+    90% {
+        transform: translate(152px, 360px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(152px, 360px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(200px, 45px);
+    }
+    53% {
+        transform: translate(200px, 45px);
+    }
+    88% {
+        transform: translate(200px, 320px);
+    }
+    90% {
+        transform: translate(200px, 320px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(200px, 320px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(160px, 57px);
+    }
+    53% {
+        transform: translate(160px, 57px);
+    }
+    83% {
+        transform: translate(160px, 340px);
+    }
+    90% {
+        transform: translate(160px, 340px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(160px, 340px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(168px, 50px);
+    }
+    53% {
+        transform: translate(168px, 50px);
+    }
+    86% {
+        transform: translate(168px, 300px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(168px, 300px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(168px, 300px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-6 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(120px, 30px);
+    }
+    53% {
+        transform: translate(120px, 30px);
+    }
+    90% {
+        transform: translate(120px, 315px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(120px, 315px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-7 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(115px, 45px);
+    }
+    53% {
+        transform: translate(115px, 45px);
+    }
+    90% {
+        transform: translate(115px, 330px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(115px, 330px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-8 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(111px, 44px);
+    }
+    53% {
+        transform: translate(111px, 44px);
+    }
+    82% {
+        transform: translate(111px, 340px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(111px, 340px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(111px, 340px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-9 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(90px, 30px);
+    }
+    53% {
+        transform: translate(90px, 30px);
+    }
+    86% {
+        transform: translate(90px, 320px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(90px, 320px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(90px, 320px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-10 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(60px, 30px);
+    }
+    53% {
+        transform: translate(60px, 30px);
+    }
+    84% {
+        transform: translate(60px, 322px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(60px, 322px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(60px, 322px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-11 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(63px, 2px);
+    }
+    53% {
+        transform: translate(63px, 2px);
+    }
+    80% {
+        transform: translate(63px, 300px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(63px, 300px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(63px, 300px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-12 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(22px, 2px);
+    }
+    53% {
+        transform: translate(22px, 2px);
+    }
+    88% {
+        transform: translate(22px, 300px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(22px, 300px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(22px, 300px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-13 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(45px, 10px);
+    }
+    53% {
+        transform: translate(45px, 10px);
+    }
+    88% {
+        transform: translate(45px, 305px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(45px, 305px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(45px, 305px);
+        opacity: 0;
+    }
+}
+@keyframes move-red-pill-14 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(5px, 0px);
+    }
+    53% {
+        transform: translate(5px, 0px);
+    }
+    88% {
+        transform: translate(5px, 300px);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(5px, 300px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(5px, 300px);
+        opacity: 0;
+    }
+}
+@keyframes remove-black {
+    0% {
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes visibility-shadow-white {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
